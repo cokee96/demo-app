@@ -21,15 +21,15 @@ spec:
     spec:
       containers:
         - name: demo-app
-          image: demo-app:latest
-          imagePullPolicy: Never   # imagen local cargada en k3d
+          image: demo-app:2.0.0
+          imagePullPolicy: Never
           ports:
             - containerPort: 8080
           env:
             - name: APP_ENV
               value: "local"
             - name: APP_VERSION
-              value: "1.0.0"
+              value: "2.0.0"
           resources:
             requests:
               cpu: 50m
